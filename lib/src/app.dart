@@ -6,10 +6,11 @@ import 'package:flutter_vscode/src/pages/contador_page.dart';
 //que está lanzando nuestro ocntador page
 //
 class MyApp extends StatelessWidget {
-  @override //para sobreescribir el build
+  //para sobreescribir el build
+  @override
   //el metodo build debe retornar un widget
   Widget build(context) {
-    //contexte contiene la info del arbol de widget, tiene info de todo
+    //context contiene la info del arbol de widget, tiene info de todo
 
     return MaterialApp(
       debugShowCheckedModeBanner: false, //quita el baner ese de modo depuracion

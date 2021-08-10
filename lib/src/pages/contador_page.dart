@@ -14,6 +14,9 @@ class _ContadorPageState extends State<ContadorPage> {
 
   @override
   Widget build(BuildContext context) {
+    //el scaffold seria el box donde voy a poner todos mis widget
+    // y adentro puse un appbar, una columna de widget que serian los textos y
+    //despues hago la fila (con el row) de botones abajo llamando al metodo de crear botones
     return Scaffold(
         appBar: AppBar(
           title: Text("app"),
@@ -23,6 +26,7 @@ class _ContadorPageState extends State<ContadorPage> {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            //<widget> me genera la lista de wiget que estan en columnas como dice arriba
             Text("nro de clicks:", style: _tamanoTexto),
             Text(
               _conteo
@@ -38,7 +42,7 @@ class _ContadorPageState extends State<ContadorPage> {
   }
 
   Widget _crearBotones() {
-    //me retorna lo que seria una fila y en este caso hago una fila de botones
+    //el Row me retorna lo que seria una fila y en este caso hago una fila de botones
     return Row(
       mainAxisAlignment: MainAxisAlignment
           .end, //dice que van al final de la fila todos los botones
@@ -49,13 +53,20 @@ class _ContadorPageState extends State<ContadorPage> {
         ),
         //BOTON 1
         FloatingActionButton(
-            child: Icon(Icons.exposure_zero), onPressed: _reset),
+            //le digo a mi boto que cuando lo presiono me ejetute la fx reset
+            child: Icon(Icons.exposure_zero),
+            onPressed: _reset), //icons.expose_zero = simbolo
         Expanded(child: SizedBox()),
         //BOTON 2
-        FloatingActionButton(child: Icon(Icons.remove), onPressed: _sustraer),
+        //le digo a mi boto que cuando lo presiono me ejetute la fx sustraer
+        FloatingActionButton(
+            child: Icon(Icons.remove),
+            onPressed: _sustraer), //icons.remove = simbolo
         SizedBox(width: 10.0),
         //BOTON 3
-        FloatingActionButton(child: Icon(Icons.add), onPressed: _agregar),
+        //le digo a mi boto que cuando lo presiono me ejetute la fx agregar
+        FloatingActionButton(
+            child: Icon(Icons.add), onPressed: _agregar), //icons.add = simbolo
       ],
     );
   }
